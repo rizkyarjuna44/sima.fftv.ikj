@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIMA v17.8 - FFTV IKJ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-container">
+  <div class="login-header">
+    <h1>SIMA v17.8</h1>
+    <p>Watermark Edition | FFTV IKJ</p>
+    <p class="subtitle">Sistem Informasi Manajemen Aset<br>Fakultas Film & Televisi · IKJ</p>
+  </div>
+
+  <div class="mode-tabs">
+    <button class="mode-tab active" data-mode="admin">👨‍💼 Admin & Staff</button>
+    <button class="mode-tab" data-mode="user">🎓 Mahasiswa / Dosen / Karyawan</button>
+  </div>
+
+  <!-- Form Admin -->
+  <form id="adminForm" class="login-form active">
+    <h3>Masuk sebagai Admin / Staff</h3>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" id="adminUsername" required placeholder="Username admin">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="adminPassword" required placeholder="Password">
+    </div>
+    <button type="submit" class="btn-primary">Masuk sebagai Admin</button>
+  </form>
+
+  <!-- Form User -->
+  <form id="userForm" class="login-form">
+    <h3>Masuk sebagai Mahasiswa / Dosen / Karyawan</h3>
+    <p class="hint">Gunakan NIM (mahasiswa) atau NIP (dosen/karyawan) dan PIN 4 digit Anda.</p>
+    <div class="form-group">
+      <label>NIM / NIP</label>
+      <input type="text" id="userNimNip" required placeholder="Contoh: 2023123456">
+    </div>
+    <div class="form-group">
+      <label>PIN (4 Digit)</label>
+      <input type="password" id="userPin" required maxlength="4" pattern="[0-9]{4}" placeholder="••••">
+    </div>
+    <p class="info">💡 PIN default = 4 digit terakhir NIM/NIP Anda</p>
+    <button type="submit" class="btn-primary">Masuk</button>
+    <p class="forgot">Lupa PIN? Hubungi <a href="#">Admin Inventaris</a></p>
+  </form>
+
+  <div id="loginMessage" class="message"></div>
+</div>
+
+<script src="/js/login.js"></script>
+</body>
+</html>

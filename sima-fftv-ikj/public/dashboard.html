@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard SIMA - FFTV IKJ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">
+      <h2>SIMA</h2>
+      <p>FFTV IKJ</p>
+    </div>
+    <nav>
+      <a href="#" class="nav-item active" data-page="dashboard">📊 Dashboard</a>
+      <a href="#" class="nav-item" data-page="aset">📦 Daftar Aset</a>
+      <a href="#" class="nav-item" data-page="tambah">➕ Tambah Aset</a>
+      <a href="#" class="nav-item" data-page="pinjam">🔄 Peminjaman</a>
+      <a href="#" class="nav-item" data-page="laporan">📈 Laporan</a>
+    </nav>
+    <button id="btnLogout" class="btn-logout">🚪 Keluar</button>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="session-info">
+        ⏱️ Sesi akan berakhir dalam <span id="sessionTimer">5:00</span>
+        <button id="btnExtend" class="btn-link">Perpanjang Sesi</button>
+      </div>
+      <div class="user-info">
+        <span id="userName">User</span>
+        <span id="userRole" class="badge">Role</span>
+      </div>
+    </header>
+
+    <section id="pageContent" class="content">
+      <h1>Dashboard</h1>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num" id="totalAset">0</div><div class="stat-label">Total Aset</div></div>
+        <div class="stat-card"><div class="stat-num" id="totalTersedia">0</div><div class="stat-label">Tersedia</div></div>
+        <div class="stat-card"><div class="stat-num" id="totalDipinjam">0</div><div class="stat-label">Dipinjam</div></div>
+        <div class="stat-card"><div class="stat-num" id="totalRusak">0</div><div class="stat-label">Rusak</div></div>
+      </div>
+      <div class="aset-list" id="asetList"></div>
+    </section>
+  </main>
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
